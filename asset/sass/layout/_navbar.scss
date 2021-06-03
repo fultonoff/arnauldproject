@@ -1,18 +1,314 @@
-.navigation{
-  
- 
+.navigation {
+  //   background-color: $dark-blue;
 
-    .nav-bar{
-        max-width: 140rem;
-        margin: 0 auto;
+  .nav-bar {
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @media only screen and(max-width: 43.75em) {
+      .toggle {
+        width: 5rem;
+        height: 5rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        z-index: 10;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-        &__list{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        span {
+          background-color: $blue;
+          width: 4rem;
+          height: 0.3rem;
+          position: relative;
+          
+
+          &::before {
+            position: absolute;
+            background-color: $blue;
+            content: '';
+            top: 10px;
+            width: 4rem;
+            height: 0.3rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          &::after {
+            position: absolute;
+            background-color: $blue;
+            content: '';
+            bottom: 10px;
+            width: 4rem;
+            height: 0.3rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
         }
+
+        &.active {
+            
+          span {
+            height: 0;
+            
+
+            &::before {
+              position: absolute;
+              background-color: $blue;
+              content: '';
+              top: 0;
+              width: 4rem;
+              height: 0.3rem;
+              transform: rotate(45deg);
+            }
+            &::after {
+              position: absolute;
+              background-color: $blue;
+              content: '';
+              bottom: -2px;
+              width: 4rem;
+              height: 0.3rem;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
     }
+
+    &__logo {
+      .bi-bank2 {
+        width: 3em;
+        color: $pink;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+
+      &.active{
+        @media only screen and(max-width: 43.75em) {
+            flex-direction: column;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100vh;
+            width: 100%;
+            overflow-y: scroll;
+            background-color: $white;
+            opacity: 1;
+            pointer-events: all;
+          }
+      }
+
+      @media only screen and(max-width: 43.75em) {
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        width: 100%;
+        overflow-y: scroll;
+        background-color: $white;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      & > * {
+        margin: 1rem;
+        color: $dark-blue;
+        font-size: 1.5rem;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        @media only screen and(max-width: 43.75em) {
+          font-size: 2rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: $dark-blue;
+          @media only screen and(max-width: 43.75em) {
+            font-size: 2rem;
+          }
+        }
+
+        &:hover {
+          transform: translateY(-0.3rem);
+        }
+      }
+
+      .dropdown-1 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .dropdown-btn1 {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 1.5rem;
+          @media only screen and(max-width: 43.75em) {
+            font-size: 2rem;
+          }
+          font-weight: 500;
+
+          &:focus + .dropdown-content {
+            opacity: 1;
+            pointer-events: all;
+          }
+        }
+
+        .dropdown-content {
+          opacity: 0;
+          pointer-events: none;
+
+          &.active {
+            @media only screen and(max-width: 43.75em) {
+              position: relative;
+              opacity: 1;
+              pointer-events: all;
+              box-shadow: none;
+              top: 0;
+              width: 100%;
+              display: flex;
+            }
+          }
+
+          @media only screen and(max-width: 43.75em) {
+            position: relative;
+            opacity: 1;
+            pointer-events: all;
+            box-shadow: none;
+            top: 0;
+            display: none;
+          }
+
+          a {
+            padding: 1rem;
+            color: $dark-blue;
+            font-family: inherit;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin-right: auto;
+            width: 100%;
+
+            &:hover {
+              background-position: 100%;
+              color: $white;
+              margin-left: 0.5rem;
+            }
+
+            &:not(:last-child) {
+              border-bottom: 0.1rem solid $grey;
+            }
+          }
+        }
+      }
+
+      .pricing {
+        a {
+          color: $dark-blue;
+        }
+      }
+
+      .dropdown-2 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .dropdown-btn2 {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 1.5rem;
+          @media only screen and(max-width: 43.75em) {
+            font-size: 2rem;
+          }
+
+          &:focus + .dropdown-content2 {
+            opacity: 1;
+            pointer-events: all;
+          }
+        }
+
+        .dropdown-content2 {
+          opacity: 0;
+          pointer-events: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 3rem;
+          width: 20rem;
+          background-color: $white;
+          overflow: hidden;
+
+          -webkit-box-shadow: 5px 5px 12px -10px #000000;
+          box-shadow: 5px 5px 12px -10px #000000;
+          border-radius: 0.2rem;
+          transition: all 0.4s ease-in-out;
+
+          &.active {
+            @media only screen and(max-width: 43.75em) {
+              position: relative;
+              opacity: 1;
+              pointer-events: all;
+              box-shadow: none;
+              top: 0;
+              width: 100%;
+              display: flex;
+            }
+          }
+          @media only screen and(max-width: 43.75em) {
+            position: relative;
+            opacity: 1;
+            pointer-events: all;
+            box-shadow: none;
+            top: 0;
+            width: 100%;
+            display: none;
+          }
+
+          a {
+            padding: 1rem;
+            color: $dark-blue;
+            font-family: inherit;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin-right: auto;
+            width: 100%;
+
+            &:hover {
+              background-position: 100%;
+              color: $white;
+              margin-left: 0.5rem;
+            }
+
+            &:not(:last-child) {
+              border-bottom: 0.1rem solid $grey;
+            }
+          }
+        }
+      }
+
+      .get-started {
+        a {
+          border-radius: 0.2rem;
+          padding: 1rem 2rem;
+          background-color: $blue-light;
+          font-weight: 500;
+          color: $blue;
+
+          &:hover {
+            box-shadow: 5px 5px 12px -10px #000000;
+          }
+        }
+      }
+    }
+  }
 }
