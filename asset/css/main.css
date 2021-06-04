@@ -1,3 +1,47 @@
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +55,7 @@ body {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 68.75em) {
@@ -27,6 +72,13 @@ html {
 
 @media only screen and (max-width: 50em) {
   font-size: 37.5%;
+}
+
+body {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 
 .btn {
@@ -565,6 +617,20 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  position: relative;
+}
+
+.hiro .header__img::after {
+  content: url(/asset/images/hero-2-triangle-2.png);
+  position: absolute;
+  z-index: 21;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-animation: rotate 5s  infinite;
+          animation: rotate 5s  infinite;
 }
 
 @media only screen and (max-width: 43.75em) {
@@ -637,6 +703,24 @@ html {
 
 .service-section {
   background-color: #DCE9F8;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-section::before {
+  position: absolute;
+  content: url(/asset/images/services-circle-2.png);
+  opacity: 0.1;
+  left: 0;
+  top: 10rem;
+}
+
+.service-section::after {
+  position: absolute;
+  content: url(/asset/images/services-circle-2.png);
+  opacity: 0.1;
+  left: 0;
+  top: 18rem;
 }
 
 .service-section .service {
@@ -731,6 +815,7 @@ html {
 }
 
 .service-section .service .feature {
+  z-index: 10;
   background-color: #ffffff;
   padding: 2rem;
   -webkit-box-shadow: 0px 40px 70px 0px rgba(0, 0, 0, 0.097);
@@ -738,6 +823,7 @@ html {
   border-radius: 2rem;
   border-top: 2px solid transparent;
   margin: 0 2rem;
+  margin-bottom: 20rem;
 }
 
 @media only screen and (max-width: 43.75em) {
@@ -832,6 +918,95 @@ html {
 
 .service-section .service .f3 .bi-layers-fill {
   color: #FBAD26;
+}
+
+.second-feature {
+  background-color: #DCE9F8;
+  position: relative;
+  overflow: hidden;
+}
+
+.second-feature::before {
+  position: absolute;
+  content: url(/asset/images/about-circle-2.png);
+  opacity: 0.1;
+  right: 0;
+  top: 10rem;
+}
+
+.second-feature::after {
+  position: absolute;
+  content: url(/asset/images/about-circle-2.png);
+  opacity: 0.1;
+  right: 0;
+  top: 18rem;
+}
+
+.second-feature .container-feature {
+  max-width: 140rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+.second-feature .container-feature__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: -7px 5px 0px -2px #ffffff;
+  box-shadow: -15px 20px 0px -2px #ffffff;
+}
+
+.second-feature .container-feature__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.second-feature .container-feature__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem 3rem;
+}
+
+.second-feature .container-feature__content .title h1 {
+  position: relative;
+  font-weight: 400;
+  font-size: 1.5;
+  color: #FE0C7D;
+  background: #eee2fd;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+}
+
+.second-feature .container-feature__content .title2 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 5.2rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.second-feature .container-feature__content .description {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+  color: #6c6a8a;
+  margin-bottom: 3rem;
+}
+
+.second-feature .container-feature__content .btn-feature2 {
+  margin-top: auto;
 }
 
 .shadow {

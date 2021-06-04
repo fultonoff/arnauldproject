@@ -1,6 +1,24 @@
 .service-section {
-//   height: 100vh;
+  //   height: 100vh;
   background-color: $blue-light;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: url(/asset/images/services-circle-2.png);
+    opacity: 0.1;
+    left: 0;
+    top: 10rem;
+  }
+
+  &::after {
+    position: absolute;
+    content: url(/asset/images/services-circle-2.png);
+    opacity: 0.1;
+    left: 0;
+    top: 18rem;
+  }
 
   .service {
     max-width: 140rem;
@@ -9,12 +27,10 @@
     .tittle {
       padding-top: 5rem;
       @media only screen and(max-width: 43.75em) {
-        
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-    }
+      }
 
       h1 {
         position: relative;
@@ -30,32 +46,24 @@
     }
 
     .description {
-        padding: 0 1rem;
+      padding: 0 1rem;
       display: flex;
       justify-content: space-between;
       margin-bottom: 10rem;
       @media only screen and(max-width: 43.75em) {
-        
-        
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
-        
-    }
+      }
 
       .tittle {
         font-size: 4rem;
         font-weight: 800;
         line-height: 5.2rem;
-        
       }
       .btn-feature {
         // align-self: flex-end;
         background-color: transparent;
-        
-
-        
       }
     }
 
@@ -65,27 +73,25 @@
       @media only screen and(max-width: 43.75em) {
         flex-direction: column;
         text-align: center;
-        
-    }
-      
+      }
     }
 
     .feature {
+      z-index: 10;
       background-color: $white;
       padding: 2rem;
       box-shadow: 0px 40px 70px 0px rgba(0, 0, 0, 0.097);
       border-radius: 2rem;
       border-top: 2px solid transparent;
       margin: 0 2rem;
-      
+      margin-bottom: 20rem;
+
       @media only screen and(max-width: 43.75em) {
         margin: 2rem 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-    }
-
+      }
 
       &:hover {
         border-top: 2px solid $purple;
@@ -112,41 +118,119 @@
           font-size: 1.5rem;
           @media only screen and(max-width: 43.75em) {
             text-align: center;
-            
-        }
+          }
         }
       }
     }
 
     .f1 {
       flex: 1;
-      &:hover{
+      &:hover {
         box-shadow: 0px 40px 70px 0px #fe0c7d1c;
+      }
+      .bi-file-earmark-bar-graph-fill {
+        color: $pink;
+      }
     }
-    .bi-file-earmark-bar-graph-fill{
-        color:$pink;
-        
-    }
-}
 
-.f2 {
-    flex: 1;
-    &:hover{
+    .f2 {
+      flex: 1;
+      &:hover {
         box-shadow: 0px 40px 70px 0px #2f81ed21;
-
-    }
-      .bi-house-fill{
-          color: $blue;
+      }
+      .bi-house-fill {
+        color: $blue;
       }
     }
     .f3 {
       flex: 1;
-      &:hover{
+      &:hover {
         box-shadow: 0px 40px 70px 0px #fbad2629;
-
+      }
+      .bi-layers-fill {
+        color: $yellow;
+      }
     }
-      .bi-layers-fill{
-          color: $yellow;
+  }
+}
+
+.second-feature {
+  background-color: $blue-light;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: url(/asset/images/about-circle-2.png);
+    opacity: 0.1;
+    right: 0;
+    top: 10rem;
+  }
+
+  &::after {
+    position: absolute;
+    content: url(/asset/images/about-circle-2.png);
+    opacity: 0.1;
+    right: 0;
+    top: 18rem;
+  }
+
+  .container-feature {
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10rem;
+    align-items: center;
+    padding: 0 2rem;
+
+    &__img {
+      flex: 1;
+      overflow: hidden;
+      border-radius: 5px;
+      -webkit-box-shadow: -7px 5px 0px -2px #ffffff;
+      box-shadow: -15px 20px 0px -2px #ffffff;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      flex: 1;
+      padding: 3rem 3rem;
+
+      .title {
+        h1 {
+          position: relative;
+
+          font-weight: 400;
+          font-size: 1.5;
+          color: $pink;
+          background: #eee2fd;
+          display: inline-block;
+          padding: 0.5rem 2rem;
+          border-radius: 5rem;
+        }
+      }
+
+      .title2 {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 5.2rem;
+        margin: 2rem 0 2rem 0;
+      }
+
+      .description {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2.6rem;
+        color: #6c6a8a;
+        margin-bottom: 3rem;
+      }
+      .btn-feature2 {
+        margin-top: auto;
       }
     }
   }

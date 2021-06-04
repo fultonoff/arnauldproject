@@ -11,6 +11,7 @@ body{
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 
     @media only screen and(max-width: 68.75em) {
         font-size: 50%;
@@ -32,3 +33,14 @@ html{
 @media only screen and(max-width: 68.75em) {
     
 }
+
+
+body { 
+  font-family: "Signika Negative", sans-serif; 
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+
+

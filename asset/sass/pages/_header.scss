@@ -33,7 +33,7 @@
           color: $dark-blue;
           position: relative;
           z-index: -1;
-
+          
           &::before {
             position: absolute;
             top: -5rem;
@@ -51,6 +51,7 @@
 
             
           }
+          
         }
       }
       .description {
@@ -60,12 +61,21 @@
           color: #52575e;
         }
       }
-      .btn-discover {
-       
-      }
+      
+      
     }
     &__img {
       flex: 1;
+      position: relative;
+      &::after{
+        content: url(/asset/images/hero-2-triangle-2.png);
+        position: absolute;
+        z-index: 21;
+        right: 0;
+        bottom: 0;
+        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: rotate 5s  infinite;
+      }
       @media only screen and(max-width: 43.75em) {
         flex: 1;
         width: 80%;
