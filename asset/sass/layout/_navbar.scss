@@ -1,6 +1,10 @@
 .navigation {
   //   background-color: $dark-blue;
 
+  border-top: 3px solid $pink;
+  -webkit-box-shadow: -5px 6px 16px -14px #000000;
+  box-shadow: -5px 6px 25px -14px #00000023;
+
   .nav-bar {
     max-width: 140rem;
     margin: 0 auto;
@@ -10,6 +14,8 @@
     position: relative;
 
     @media only screen and(max-width: 43.75em) {
+      padding: 2rem;
+      z-index: 30;
       .toggle {
         width: 5rem;
         height: 5rem;
@@ -18,9 +24,8 @@
         align-items: center;
         z-index: 30;
         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        position: fixed;
-        right: 0;
-        
+        // position: fixed;
+        // right: 1px;
 
         span {
           background-color: $blue;
@@ -49,6 +54,8 @@
         }
 
         &.active {
+          position: fixed;
+          right: 10px;
           span {
             height: 0;
 
