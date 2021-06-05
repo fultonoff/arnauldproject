@@ -42,3 +42,48 @@
       }
     }
 }
+
+.btn-2{
+  background-color: none;
+  border: none;
+  margin: 2rem 0;
+
+
+
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
+
+  a {
+    padding: 2rem 4rem;
+    text-decoration: none;
+    color: $blue;
+    background-color: $white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+
+    @media only screen and(max-width: 43.75em) {
+      padding: 2rem 5rem;
+     
+  }
+
+    background-image: linear-gradient(
+      45deg,
+      transparent 0%,
+      transparent 50%,
+      $blue 50%
+    );
+    background-size: 300%;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+      background-position: 100%;
+      color: $white;
+      margin-left: 0.5rem;
+      box-shadow: 10px 10px 46px -10px rgba(47, 128, 237, 0.75);
+      -webkit-box-shadow: 10px 10px 46px -10px rgba(47, 128, 237, 0.75);
+      -moz-box-shadow: 10px 10px 46px -10px rgba(47, 128, 237, 0.75);
+    }
+  }
+}

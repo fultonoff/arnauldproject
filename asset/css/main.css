@@ -51,6 +51,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -125,8 +126,56 @@ body {
   -moz-box-shadow: 10px 10px 46px -10px rgba(47, 128, 237, 0.75);
 }
 
+.btn-2 {
+  background-color: none;
+  border: none;
+  margin: 2rem 0;
+}
+
+.btn-2:hover {
+  -webkit-transform: translateY(-0.3rem);
+      -ms-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+}
+
+.btn-2 a {
+  padding: 2rem 4rem;
+  text-decoration: none;
+  color: #2F80ED;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  background-image: -webkit-linear-gradient(45deg, transparent 0%, transparent 50%, #2F80ED 50%);
+  background-image: -o-linear-gradient(45deg, transparent 0%, transparent 50%, #2F80ED 50%);
+  background-image: linear-gradient(45deg, transparent 0%, transparent 50%, #2F80ED 50%);
+  background-size: 300%;
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media only screen and (max-width: 43.75em) {
+  .btn-2 a {
+    padding: 2rem 5rem;
+  }
+}
+
+.btn-2 a:hover {
+  background-position: 100%;
+  color: #ffffff;
+  margin-left: 0.5rem;
+  box-shadow: 10px 10px 46px -10px rgba(47, 128, 237, 0.75);
+  -webkit-box-shadow: 10px 10px 46px -10px rgba(47, 128, 237, 0.75);
+  -moz-box-shadow: 10px 10px 46px -10px rgba(47, 128, 237, 0.75);
+}
+
 .tabbed {
   height: 100vh;
+}
+
+.tabbed .text {
+  padding: 1.5rem;
 }
 
 .tabbed-container {
@@ -146,6 +195,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -188,16 +240,11 @@ body {
 }
 
 .tabbed-container .flex-container #tabs li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 4rem 5rem;
   margin-bottom: 2rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 0.5rem;
   cursor: pointer;
+  list-style: none;
 }
 
 .tabbed-container .flex-container #tabs li:hover {
@@ -242,6 +289,12 @@ body {
 .tabbed-container .flex-container .flex-item.active {
   display: block;
   padding: 1em;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .tabbed-container .flex-container .flex-item.active {
+    padding: 0;
+  }
 }
 
 .tabbed-container .flex-container .tab-content {
@@ -290,7 +343,7 @@ body {
   height: 25rem;
   width: 25rem;
   border-radius: 50%;
-  background-color: #FBAD26;
+  background-color: #FE0C7D;
   opacity: 0.2;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -966,6 +1019,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
 }
 
@@ -1272,6 +1326,84 @@ body {
   color: #6c6a8a;
   margin-top: 2rem;
   line-height: 2.6rem;
+}
+
+.contact1 {
+  background-color: #ffffff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10rem 2rem;
+  overflow: hidden;
+}
+
+.contact1-box {
+  margin-top: 2rem;
+  position: relative;
+  background: -webkit-linear-gradient(45deg, #2F80ED, #021937);
+  background: -o-linear-gradient(45deg, #2F80ED, #021937);
+  background: linear-gradient(45deg, #2F80ED, #021937);
+  max-width: 110rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  padding: 2rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .contact1-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 2rem;
+  }
+}
+
+.contact1-box .text {
+  z-index: 1;
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .contact1-box .text {
+    text-align: center;
+  }
+}
+
+.contact1-box .up {
+  z-index: 1;
+}
+
+.contact1-box::before {
+  position: absolute;
+  content: url(/asset/images/wave.png);
+  bottom: -5px;
+  opacity: .5;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .contact1-box::before {
+    bottom: -100px;
+  }
 }
 
 .shadow {

@@ -30,6 +30,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
 
       h1 {
@@ -261,5 +262,67 @@
     color: #6c6a8a;
     margin-top: 2rem;
     line-height: 2.6rem;
+  }
+}
+
+.contact1{
+  background-color: $white;
+  width: 100%;
+  // height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 2rem;
+  overflow: hidden;
+  
+
+  &-box{
+    margin-top: 2rem;
+    position: relative;
+    background: linear-gradient(45deg, $blue, $dark-blue);
+    max-width: 110rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 2rem;
+    overflow: hidden;
+    width: 100%;
+    
+
+    @media only screen and(max-width: 43.75em) {
+      flex-direction: column;
+      margin: 0 2rem;
+      }
+
+    .text{
+      z-index: 1;
+      font-size: 2.5rem;
+      color: $white;
+      font-weight: 700;
+      @media only screen and(max-width: 43.75em) {
+       text-align: center;
+        }
+      
+    }
+    .up{
+      z-index: 1;
+      
+      
+    }
+
+    &::before{
+      position: absolute;
+      content: url(/asset/images/wave.png);
+      bottom: -5px;
+      opacity: .5;
+
+      @media only screen and(max-width: 43.75em) {
+        bottom: -100px;
+        }
+      
+     
+      
+    }
   }
 }
