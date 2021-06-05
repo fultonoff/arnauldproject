@@ -1,0 +1,184 @@
+.tabbed {
+  height: 100vh;
+
+  &-container {
+    max-width: 110rem;
+    margin: 5rem auto;
+      
+
+    .flex-container {
+      display: flex;
+    //   overflow: hidden;
+
+      @media only screen and(max-width: 43.75em) {
+        flex-direction: column;
+      }
+
+      // Navigation Items
+      #tabs {
+        @media only screen and(max-width: 43.75em) {
+          display: flex;
+          justify-content: center;
+        }
+
+        .tab-nav1 {
+          color: $pink;
+          background-color: $pink-light;
+
+          svg{
+              margin-bottom: 1rem;
+          }
+          
+        }
+
+        .tab-nav2 {
+          color: $blue;
+          background-color: $blue-light;
+
+          svg{
+            margin-bottom: 1rem;
+        }
+        }
+
+        .tab-nav3 {
+          color: $yellow;
+          background-color: $yellow-light;
+
+          svg{
+            margin-bottom: 1rem;
+        }
+        }
+        li {
+          display: flex;
+          padding: 4rem 5rem;
+          margin-bottom: 2rem;
+          align-items: center;
+          border-radius: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(0.3rem);
+          }
+          svg {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+          }
+        }
+
+        [data-tab] {
+          // Tab "active" styles
+
+          @media only screen and(max-width: 43.75em) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+          }
+          &.active {
+            background-color: $pink;
+            color: $white;
+            
+          }
+        }
+      }
+
+      // Content Items
+      .flex-item {
+        display: none; // Hide all content
+        &.active {
+          display: block; // Display "active" content
+          padding: 1em;
+        }
+      }
+
+      .tab-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: animbefore 10s infinite;
+
+        @media only screen and(max-width: 43.75em) {
+          
+          width: 100%;
+          animation: none;
+          margin: 0 auto;
+
+          &::before{
+              display: none;
+              
+          }
+
+          &:after{
+              display: none;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          bottom: -5rem;
+          right: -10rem;
+          content: '';
+          height: 25rem;
+          width: 25rem;
+          border-radius: 50%;
+          background-color: $yellow;
+          opacity: 0.2;
+          transition: all 0.4s ease-in-out;
+          animation: animbefore 4s infinite;
+        }
+
+        &::after {
+          position: absolute;
+          top: -5rem;
+          left: 0rem;
+          content: '';
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+          background-color: $pink;
+          opacity: 0.2;
+          transition: all 0.4s ease-in-out;
+          animation: animbefore 4s infinite;
+        }
+        .flex-item {
+          .build {
+            margin-left: 4rem;
+
+            padding: 1rem;
+            border-radius: 0.5rem;
+
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 25px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            &-text {
+              font-size: 2rem;
+              font-weight: 800;
+            }
+
+            &-description {
+              padding: 2rem 0;
+              font-size: 1.4rem;
+              text-align: left;
+              color: $dark-blue;
+            }
+
+            &-img {
+              height: 40%;
+              width: 40%;
+              margin-left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

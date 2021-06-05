@@ -39,3 +39,34 @@ togBtn.addEventListener('click', () => {
 
 
 // gsap.from('.header', { duration: 0.6, ease: 'power2. out', opacity:0, y: -60, delay: .2});
+
+
+///////////////////////////////////
+//tabbed
+
+const _tabs = document.querySelectorAll('[data-tab]');
+const _content = document.getElementsByClassName('active');
+
+// -------- STEP 3 -------- //
+const toggleContent = function() {
+  
+  
+  if (!this.classList.contains("active")) {
+    
+    Array.from(_content).forEach( item => {
+      item.classList.remove('active');
+    });
+    
+    this.classList.add('active');
+    
+  
+    let currentTab = this.getAttribute('data-tab'),
+       _tabContent = document.getElementById(currentTab);
+       _tabContent.classList.add('active');
+  }
+};
+
+
+Array.from(_tabs).forEach( item => {
+  item.addEventListener('click', toggleContent);
+});
