@@ -108,3 +108,8 @@ var swiper = new Swiper('.swiper-container', {
     },
   }
 });
+
+///////////////////////////
+//Accordion
+
+new Accordion('.accordion-container');

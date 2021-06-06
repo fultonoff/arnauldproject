@@ -1,0 +1,92 @@
+.faq{
+    height: 100vh;
+
+    &-section{
+        margin: 0 auto;
+        max-width: 140rem;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and(max-width: 43.75em) {
+            flex-direction: column;
+        }
+        .accordion{
+
+            @media only screen and(max-width: 43.75em) {
+                margin: 3rem;
+            }
+            flex: 1;
+            .accordion-container{
+                border-top: 2px solid $blue;
+                background-color: $white;
+                border-radius: 5px;
+                height: 100%;
+                font-family: inherit;
+                box-shadow: -5px -1px 17px -10px rgba(8, 113, 199, 0.679);
+                font-family: 'Rubik', sans-serif;
+                .ac{
+                    border: none;
+                }
+    
+                .ac1{
+                    border-bottom: 1px solid $blue-light;
+                }
+                
+    
+                .ac-trigger{
+                    padding: 2rem;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
+            }
+        }
+        
+
+        .faq-content{
+            flex: 1;
+            margin-left: 5rem;
+
+            &__tittle{
+                font-size: 3rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+            &__dexription{
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 3rem;
+                color: dimgray;
+            }
+        }
+
+        .faq-content__counter{
+            display: flex;
+
+            &>*{
+                margin-right: 4rem;
+            }
+
+            .amount{
+                .detail{
+                    font-size: 1.5rem;
+                }
+                .num1, .num2, .num3{
+                    font-size: 4rem;
+                    font-weight: 700;
+                }
+
+                .num1{
+                    color: $pink;
+                }
+                .num2{
+                    color: $yellow;
+                }
+                .num3{
+                    color: $blue;
+                }
+            }
+        }
+
+    }
+}
