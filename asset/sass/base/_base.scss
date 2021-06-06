@@ -45,7 +45,9 @@ html{
 	width: 100%;
 	margin: -4px 0 0 0;
 	border-radius: 0;
-	
+	@media only screen and(max-width: 43.75em) {
+        height: 1px;
+      }
 }
 
 .progress-amt {
@@ -53,7 +55,7 @@ html{
 	top: 0;
 	left: 0;
 	bottom: 0;
-	background-color: #1de9b6;
+	background-color: $blue;
 	transition: width .3s linear;
 }
 
