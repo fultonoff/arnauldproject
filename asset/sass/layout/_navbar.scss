@@ -1,9 +1,16 @@
 .navigation {
   //   background-color: $dark-blue;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: $white;
 
-  border-top: 3px solid $pink;
   -webkit-box-shadow: -5px 6px 16px -14px #000000;
   box-shadow: -5px 6px 25px -14px #00000023;
+
+  @media only screen and(max-width: 43.75em) {
+    top: 0;
+  }
 
   .nav-bar {
     max-width: 140rem;
