@@ -186,7 +186,7 @@
     padding: 0 2rem;
 
     @media only screen and(max-width: 43.75em) {
-    flex-direction: column;
+      flex-direction: column;
     }
 
     &__img {
@@ -208,7 +208,7 @@
       padding: 3rem 3rem;
       @media only screen and(max-width: 43.75em) {
         text-align: center;
-        }
+      }
 
       .title {
         h1 {
@@ -245,19 +245,19 @@
   }
 }
 
-.text{
+.text {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 15rem 0;
 
-  .tittle{
+  .tittle {
     font-size: 4rem;
     font-weight: 900;
     text-align: center;
   }
 
-  .description{
+  .description {
     font-size: 1.6rem;
     font-weight: 600;
     color: #6c6a8a;
@@ -266,9 +266,9 @@
   }
 }
 
-.contact1{
+.contact1 {
   background-color: $white;
-  
+
   // height: 30vh;
   display: flex;
   justify-content: center;
@@ -276,13 +276,11 @@
   margin: 10rem 2rem;
   // overflow: hidden;
   @media only screen and(max-width: 43.75em) {
-    
     margin-left: 0;
-    padding: 0; 
-    }
-  
+    padding: 0;
+  }
 
-  &-box{
+  &-box {
     margin-top: 5rem;
     position: relative;
     background: linear-gradient(45deg, $blue, $dark-blue);
@@ -294,53 +292,42 @@
     padding: 2rem;
     overflow: hidden;
     width: 100%;
-    
 
     @media only screen and(max-width: 43.75em) {
       flex-direction: column;
       margin: 1rem;
-      }
+    }
 
-    .text{
+    .text {
       z-index: 1;
       font-size: 2.5rem;
       color: $white;
       font-weight: 700;
       @media only screen and(max-width: 43.75em) {
-       text-align: center;
-        }
-      
+        text-align: center;
+      }
     }
-    .up{
+    .up {
       z-index: 1;
-      
-      
     }
 
-    &::before{
+    &::before {
       position: absolute;
       content: url(/asset/images/wave.png);
       bottom: -5px;
-      opacity: .5;
+      opacity: 0.5;
 
       @media only screen and(max-width: 43.75em) {
         bottom: -100px;
-        }
-      
-     
-      
+      }
     }
   }
 }
 
-.section-showcase{
-  
+.section-showcase {
   background-color: $blue-light;
-  
-  
-  
 
-  .content-box{
+  .content-box {
     display: flex;
     max-width: 110rem;
     margin: 10rem auto;
@@ -349,9 +336,9 @@
     @media only screen and(max-width: 43.75em) {
       flex-direction: column;
       align-items: center;
-      }
+    }
 
-    h1{
+    h1 {
       position: relative;
       font-size: 4rem;
       font-weight: 800;
@@ -361,10 +348,125 @@
       z-index: 20;
       @media only screen and(max-width: 43.75em) {
         text-align: center;
+      }
+    }
+  }
+}
+
+.article {
+  // height: 100vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 110rem;
+    margin: 0 auto;
+
+    .text {
+      font-size: 4rem;
+      text-align: center;
+      flex: 1;
+    }
+
+    .content {
+      background-color: $white;
+      display: flex;
+      margin-bottom: 10rem;
+      @media only screen and(max-width: 43.75em) {
+        flex-direction: column;
+        margin: 2rem;
+      }
+
+      &__box {
+        margin: 2rem;
+        box-shadow: 0px 40px 70px 0px #2f81ed21;
+
+        .img-box {
+          border-radius: 0.5rem;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
         }
 
-      
+        .datentitle {
+          display: flex;
+          justify-content: space-between;
+          padding: 2rem;
+          align-items: center;
+
+          .date {
+            color: dimgray;
+          }
+          .date,
+          .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+          .title {
+            color: $blue;
+          }
+        }
+
+        h1 {
+          font-size: 2.2rem;
+          color: $dark-blue;
+          font-weight: 700;
+          padding: 2rem;
+          margin-top: 4rem;
+        }
+      }
     }
-    
+  }
+}
+
+.call {
+  margin-top: 5rem;
+  background: linear-gradient(45deg, $dark-blue, $blue);
+
+  &-container {
+    display: flex;
+    max-width: 100rem;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    padding: 10rem 0;
+
+    @media only screen and(max-width: 43.75em) {
+      flex-direction: column;
+      align-items: center;
+      background: #044786;
+    }
+
+    .call-container__entreprise {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      @media only screen and(max-width: 43.75em) {
+        align-items: center;
+        margin: 2rem;
+
+        border-radius: 1rem;
+        padding: 2rem;
+        background: #044786;
+        box-shadow: 20px 20px 60px #033c72, -20px -20px 60px #05529a;
+      }
+      h1 {
+        font-size: 3.4rem;
+        color: $white;
+        font-weight: 700;
+      }
+      p {
+        font-size: 1.5rem;
+        color: $white;
+        margin: 2rem 0;
+      }
+    }
+    .call-container__entreprise {
+    }
   }
 }

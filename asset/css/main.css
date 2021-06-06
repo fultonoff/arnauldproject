@@ -72,7 +72,7 @@ html {
 }
 
 .faq {
-  height: 100vh;
+  margin-bottom: 5rem;
 }
 
 .faq-section {
@@ -1552,7 +1552,7 @@ html {
   position: absolute;
   content: url(/asset/images/wave.png);
   bottom: -5px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 43.75em) {
@@ -1609,6 +1609,171 @@ html {
   .section-showcase .content-box h1 {
     text-align: center;
   }
+}
+
+.article__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.article__container .text {
+  font-size: 4rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.article__container .content {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10rem;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .article__container .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 2rem;
+  }
+}
+
+.article__container .content__box {
+  margin: 2rem;
+  -webkit-box-shadow: 0px 40px 70px 0px #2f81ed21;
+          box-shadow: 0px 40px 70px 0px #2f81ed21;
+}
+
+.article__container .content__box .img-box {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.article__container .content__box .img-box img {
+  width: 100%;
+}
+
+.article__container .content__box .datentitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article__container .content__box .datentitle .date {
+  color: dimgray;
+}
+
+.article__container .content__box .datentitle .date,
+.article__container .content__box .datentitle .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.article__container .content__box .datentitle .title {
+  color: #2F80ED;
+}
+
+.article__container .content__box h1 {
+  font-size: 2.2rem;
+  color: #021937;
+  font-weight: 700;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.call {
+  margin-top: 5rem;
+  background: -webkit-linear-gradient(45deg, #021937, #2F80ED);
+  background: -o-linear-gradient(45deg, #021937, #2F80ED);
+  background: linear-gradient(45deg, #021937, #2F80ED);
+}
+
+.call-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .call-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #044786;
+  }
+}
+
+.call-container .call-container__entreprise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .call-container .call-container__entreprise {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: #044786;
+    -webkit-box-shadow: 20px 20px 60px #033c72, -20px -20px 60px #05529a;
+            box-shadow: 20px 20px 60px #033c72, -20px -20px 60px #05529a;
+  }
+}
+
+.call-container .call-container__entreprise h1 {
+  font-size: 3.4rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.call-container .call-container__entreprise p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 2rem 0;
 }
 
 .shadow {

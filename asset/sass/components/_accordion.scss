@@ -1,5 +1,6 @@
 .faq{
-    height: 100vh;
+    // height: 100vh;
+    margin-bottom: 5rem;
 
     &-section{
         margin: 0 auto;
@@ -24,6 +25,7 @@
                 font-family: inherit;
                 box-shadow: -5px -1px 17px -10px rgba(8, 113, 199, 0.679);
                 font-family: 'Rubik', sans-serif;
+                
                 .ac{
                     border: none;
                 }
