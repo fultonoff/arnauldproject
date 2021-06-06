@@ -276,7 +276,7 @@ html {
   background-image: -webkit-linear-gradient(45deg, transparent 0%, transparent 50%, #2F80ED 50%);
   background-image: -o-linear-gradient(45deg, transparent 0%, transparent 50%, #2F80ED 50%);
   background-image: linear-gradient(45deg, transparent 0%, transparent 50%, #2F80ED 50%);
-  background-size: 300%;
+  background-size: 400%;
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
