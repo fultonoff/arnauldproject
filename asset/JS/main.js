@@ -139,7 +139,8 @@ ScrollTrigger.create({
 
 $('.bar').momentum({
   barSelector: '.progress-bar',
-  customCss: true
+  customCss: true,
+  offset: 'top'
 
 });
 
