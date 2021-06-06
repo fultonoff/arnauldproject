@@ -55,6 +55,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 1rem;
       }
 
       .tittle {
@@ -329,5 +330,41 @@
      
       
     }
+  }
+}
+
+.section-showcase{
+  
+  background-color: $blue-light;
+  
+  
+  
+
+  .content-box{
+    display: flex;
+    max-width: 110rem;
+    margin: 10rem auto;
+    justify-content: space-between;
+    padding-top: 10rem;
+    @media only screen and(max-width: 43.75em) {
+      flex-direction: column;
+      align-items: center;
+      }
+
+    h1{
+      position: relative;
+      font-size: 4rem;
+      font-weight: 800;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+      @media only screen and(max-width: 43.75em) {
+        text-align: center;
+        }
+
+      
+    }
+    
   }
 }
